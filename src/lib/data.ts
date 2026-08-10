@@ -77,7 +77,7 @@ export const projects: Project[] = [
     description:
       "Aplicação full stack com autenticação e CRUD completo — base sólida de back-end por trás de qualquer canal digital (site, blog, área logada).",
     stack: ["Node.js", "Express", "PostgreSQL", "JWT"],
+    repo: "https://github.com/pikachuzinn/mini-blog",
     featured: false,
-    status: "em-desenvolvimento",
   },
 ];
