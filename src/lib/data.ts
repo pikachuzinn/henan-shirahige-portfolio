@@ -17,7 +17,7 @@ export const profile = {
 export const skills = [
   {
     category: "Automação & IA",
-    items: ["N8N", "Agentes de IA", "OpenAI", "Integração com LLMs", "Webhooks"],
+    items: ["N8N", "Agentes de IA", "Claude / LLMs", "Tool use", "Webhooks"],
   },
   {
     category: "Produto & Web",
@@ -54,22 +54,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "crm-n8n-api",
-    title: "API de CRM com N8N",
+    slug: "notaflow",
+    title: "NotaFlow — Extração de Notas Fiscais com IA",
     description:
-      "API de CRM integrada a fluxos N8N pra eliminar trabalho manual de time comercial — sincronização de leads, notificações e follow-up automático entre sistemas.",
-    stack: ["Node.js", "N8N", "PostgreSQL", "REST"],
+      "Pipeline que lê nota fiscal em PDF e devolve dado estruturado no banco. Extração com LLM e tool use, validação antes de gravar e retentativa corretiva que devolve o erro ao modelo. Documento que não passa na validação vai para revisão manual com aviso por e-mail, em vez de entrar sujo no banco. Idempotência, migrations versionadas, testes e CI.",
+    stack: ["Python", "Claude", "PostgreSQL", "Docker", "Google Drive"],
+    repo: "https://github.com/pikachuzinn/notaflow",
     featured: true,
-    status: "em-desenvolvimento",
   },
   {
-    slug: "agente-ia-suporte",
-    title: "Agente de IA para Suporte",
+    slug: "dragon-ball-z-api",
+    title: "Dragon Ball Z API",
     description:
-      "Agente de IA pra atendimento ao cliente, com memória de contexto e respostas geradas a partir de base de conhecimento própria — reduz volume de ticket repetitivo pra time humano.",
-    stack: ["Python", "OpenAI", "PostgreSQL"],
+      "API REST completa com autenticação JWT, CRUD de três entidades relacionadas, filtros, paginação e ordenação. Suíte de testes automatizados, tratamento global de erros e collection Postman pronta para consumo.",
+    stack: ["Node.js", "Express", "SQLite", "JWT", "Jest"],
+    repo: "https://github.com/pikachuzinn/trabalho-api-full",
     featured: true,
-    status: "em-desenvolvimento",
   },
   {
     slug: "mini-blog-node",
@@ -79,5 +79,23 @@ export const projects: Project[] = [
     stack: ["Node.js", "Express", "PostgreSQL", "JWT"],
     repo: "https://github.com/pikachuzinn/mini-blog",
     featured: false,
+  },
+  {
+    slug: "crm-n8n-api",
+    title: "API de CRM com N8N",
+    description:
+      "API de CRM integrada a fluxos N8N pra eliminar trabalho manual de time comercial — sincronização de leads, notificações e follow-up automático entre sistemas.",
+    stack: ["Node.js", "N8N", "PostgreSQL", "REST"],
+    featured: false,
+    status: "em-desenvolvimento",
+  },
+  {
+    slug: "agente-ia-suporte",
+    title: "Agente de IA para Suporte",
+    description:
+      "Agente de IA pra atendimento ao cliente, com memória de contexto e respostas geradas a partir de base de conhecimento própria — reduz volume de ticket repetitivo pra time humano.",
+    stack: ["Python", "LLM", "PostgreSQL"],
+    featured: false,
+    status: "em-desenvolvimento",
   },
 ];
