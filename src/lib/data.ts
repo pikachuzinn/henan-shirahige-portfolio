@@ -63,6 +63,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "radar-provedores",
+    title: "Radar de Provedores",
+    description:
+      "Ferramenta de análise de viabilidade que mapeia provedores de internet numa região via Google Places API, com interface gráfica e linha de comando. Mede a sobreposição entre os termos de busca e recomenda o menor conjunto que reproduz o mesmo resultado, calibrado em várias cidades. Cache local, deduplicação, exportação CSV/Excel e 231 testes.",
+    stack: ["Python", "Google Places API", "tkinter", "pytest"],
+    repo: "https://github.com/pikachuzinn/radar-provedores",
+    featured: true,
+  },
+  {
     slug: "dragon-ball-z-api",
     title: "Dragon Ball Z API",
     description:
