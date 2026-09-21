@@ -33,7 +33,7 @@ export const skills = [
   },
   {
     category: "Linguagens",
-    items: ["JavaScript", "TypeScript", "Python", "SQL", "Lua"],
+    items: ["Java", "Python", "TypeScript", "JavaScript", "SQL"],
   },
   {
     category: "Infra & Práticas",
@@ -53,6 +53,15 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "ecommerce-api",
+    title: "E-commerce Orders API",
+    description:
+      "API REST de catálogo e pedidos em Java 21 + Spring Boot 4, construída em torno das regras que um e-commerce precisa acertar e não em torno do CRUD: reserva de estoque sob concorrência com lock pessimista, preço congelado no momento da compra, máquina de estados do pedido e autorização por papel e por dono do recurso. Flyway, JWT stateless, OpenAPI, testes de integração contra PostgreSQL real e CI no GitHub Actions.",
+    stack: ["Java 21", "Spring Boot 4", "PostgreSQL", "Flyway", "Testcontainers"],
+    repo: "https://github.com/pikachuzinn/ecommerce-api",
+    featured: true,
+  },
   {
     slug: "notaflow",
     title: "NotaFlow — Extração de Notas Fiscais com IA",
